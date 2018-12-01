@@ -34,7 +34,7 @@ def create():
     available=request.form['avl']
 
     collection1 = db.Student
-    p_id = collection1.insert_one({'name': name,'email':email,'phone':phone,'city1': city1,'city2': city2,'city3': city3,'education': education,'marks': marks,'intern': intern,'int_tech': int_tech,'int_c_name': int_c_name,'int_period': int_period,'int_desc': int_desc,'project': project,'p_tech': p_tech,'p_period': p_period,'int_tech': int_tech,'p_desc': p_desc,'skills': skills,'expertlevel': expertlevel,'add_details': add_details,'prefer_com': prefer_com,'prefer_pos': prefer_pos,'available': available,}).inserted_id
+    p_id = collection1.insert_one({'name': name,'email':email,'phone':phone,'city1': city1,'city2': city2,'city3': city3,'education': education,'marks': marks,'int_tech': int_tech,'int_c_name': int_c_name,'int_period': int_period,'int_desc': int_desc,'project': project,'p_tech': p_tech,'p_period': p_period,'p_desc': p_desc,'skills': skills,'prefer_com': prefer_com,'prefer_pos': prefer_pos,'available': available,}).inserted_id
 
 
 @app.route('/result_com',methods=['post'])
