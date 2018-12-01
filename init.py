@@ -17,7 +17,7 @@ def create():
     city3=request.form['prefer_city3']
     education=request.form['inst']
     marks=request.form['marks']
-    intern=request.form['intern']
+    #intern=request.form['intern']
     int_tech=request.form['tech']
     int_c_name = request.form['c_name']
     int_period = request.form['period']
@@ -27,8 +27,8 @@ def create():
     p_period = request.form['p_period']
     p_desc=request.form['p_desc']
     skills=request.form['skill']
-    expertlevel=request.form['expertlevel']
-    add_details=request.form['add_details']
+    #expertlevel=request.form['expertlevel']
+    #add_details=request.form['add_details']
     prefer_com=request.form['prefer_com']
     prefer_pos=request.form['prefer_pos']
     available=request.form['avl']
@@ -41,6 +41,7 @@ def create():
 def com():
     com_name=request.form['com_name']
     website=request.form['website']
+    com_email = request.form['exampleEmail']
     year=request.form['year']
     com_desc=request.form['com_desc']
     pos_avl=request.form['pos_avl']
@@ -50,4 +51,4 @@ def com():
     skill_required=request.form['skill']
 
     collection2 = db.company
-    pid = collection2.insert_one({'com_name': com_name , 'website': website, 'year':year , 'com_desc':com_desc , 'pos_avl':pos_avl , 'pos_desc': pos_desc, 'pos_time': pos_time, 'pos_place':pos_place , 'skill_required':  skill_required}).inserted_id
+    pid = collection2.insert_one({'com_name': com_name , 'website': website, 'year':year ,'com_email':com_email, 'com_desc':com_desc , 'pos_avl':pos_avl , 'pos_desc': pos_desc, 'pos_time': pos_time, 'pos_place':pos_place , 'skill_required':  skill_required}).inserted_id
